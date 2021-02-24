@@ -6,7 +6,11 @@ const app = require('../app');
 const env = require(`../environment/${ process.env.NODE_ENV }`);
 
 console.log('userProfile in serveur: ');
-console.log(process.env['USERPROFILE']);
+const username = require('username');
+ 
+username().then(username => {
+    console.log(username);
+});
 
 
 const httpServer = http.createServer((req, res) => { 
