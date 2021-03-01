@@ -3,7 +3,7 @@ const { tweetList, tweetNew, tweetCreate, tweetDelete, tweetEdit, tweetUpdate } 
 const Tweet = require('../database/models/tweet.model');
 
 router.get('/', tweetList)
-router.get('/new', tweetNew)
+router.get('/new', tweetNew);
 router.post('/', tweetCreate);
 router.get('/edit/:tweetId', tweetEdit);
 router.post('/update/:tweetId', tweetUpdate);
